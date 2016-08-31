@@ -1,0 +1,68 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/josecullen/.nvm/versions/node/v4.4.7/bin/node',
+1 verbose cli   '/home/josecullen/.nvm/versions/node/v4.4.7/bin/npm',
+1 verbose cli   'version',
+1 verbose cli   'patch' ]
+2 info using npm@3.10.5
+3 info using node@v4.4.7
+4 info git [ 'status', '--porcelain' ]
+5 verbose stack Error: Git working directory not clean.
+5 verbose stack A  .npmignore
+5 verbose stack D  app/app.component.ts
+5 verbose stack AM components.d.ts
+5 verbose stack AM components.js
+5 verbose stack M index.html
+5 verbose stack M package.json
+5 verbose stack R  app/app.component.js -> src/app.component.js
+5 verbose stack R  app/app.component.js.map -> src/app.component.js.map
+5 verbose stack RM app/app.module.js -> src/blog.module.js
+5 verbose stack RM app/app.module.js.map -> src/blog.module.js.map
+5 verbose stack RM app/app.module.ts -> src/blog.module.ts
+5 verbose stack AM src/comments.component.ts
+5 verbose stack RM app/main.js -> src/main.js
+5 verbose stack RM app/main.js.map -> src/main.js.map
+5 verbose stack RM app/main.ts -> src/main.ts
+5 verbose stack A  src/models.ts
+5 verbose stack A  src/post.component.ts
+5 verbose stack A  src/tsconfig.json
+5 verbose stack M systemjs.config.js
+5 verbose stack M tsconfig.json
+5 verbose stack     at /home/josecullen/.nvm/versions/node/v4.4.7/lib/node_modules/npm/lib/version.js:247:19
+5 verbose stack     at /home/josecullen/.nvm/versions/node/v4.4.7/lib/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
+5 verbose stack     at ChildProcess.exithandler (child_process.js:204:7)
+5 verbose stack     at emitTwo (events.js:87:13)
+5 verbose stack     at ChildProcess.emit (events.js:172:7)
+5 verbose stack     at maybeClose (internal/child_process.js:827:16)
+5 verbose stack     at Socket.<anonymous> (internal/child_process.js:319:11)
+5 verbose stack     at emitOne (events.js:77:13)
+5 verbose stack     at Socket.emit (events.js:169:7)
+5 verbose stack     at Pipe._onclose (net.js:486:12)
+6 verbose cwd /home/josecullen/Documentos/dev/pruebas/torbi-ng2-blog
+7 error Linux 4.4.0-34-generic
+8 error argv "/home/josecullen/.nvm/versions/node/v4.4.7/bin/node" "/home/josecullen/.nvm/versions/node/v4.4.7/bin/npm" "version" "patch"
+9 error node v4.4.7
+10 error npm  v3.10.5
+11 error Git working directory not clean.
+11 error A  .npmignore
+11 error D  app/app.component.ts
+11 error AM components.d.ts
+11 error AM components.js
+11 error M index.html
+11 error M package.json
+11 error R  app/app.component.js -> src/app.component.js
+11 error R  app/app.component.js.map -> src/app.component.js.map
+11 error RM app/app.module.js -> src/blog.module.js
+11 error RM app/app.module.js.map -> src/blog.module.js.map
+11 error RM app/app.module.ts -> src/blog.module.ts
+11 error AM src/comments.component.ts
+11 error RM app/main.js -> src/main.js
+11 error RM app/main.js.map -> src/main.js.map
+11 error RM app/main.ts -> src/main.ts
+11 error A  src/models.ts
+11 error A  src/post.component.ts
+11 error A  src/tsconfig.json
+11 error M systemjs.config.js
+11 error M tsconfig.json
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
