@@ -1,4 +1,3 @@
-exports.BlogModule = require('./lib/blog.module').BlogModule;
-exports.TbtComments= require('./lib/comments.component').TbtComments;
-exports.Post = require('./lib/models').Post;
-exports.TbtPost = require('./lib/post.component').TbtPost;
+exports.ChoiceGameModule = require('./lib/choice-game.module').ChoiceGameModule;
+exports.ChoiceGameTest = require('./lib/choice-game-test.component').ChoiceGameTest;
+exports.Models = require('./lib/models');
