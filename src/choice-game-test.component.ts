@@ -6,7 +6,7 @@ import {Post, GameProblem, GameLevel, ScoreConfig, ExtraScore} from './models'
 import {ToolbarConfig} from "./commons/toolbar/toolbar.component";
 
 @Component({
-    selector: 'tbt-post',
+    selector: 'tbt-choices-game',
     template: `
         <game-toolbar></game-toolbar>
         <game-view></game-view>
@@ -25,7 +25,7 @@ import {ToolbarConfig} from "./commons/toolbar/toolbar.component";
     `
 })
 export class ChoiceGameTest{
-    answers:Array<string> = ["hola", "barbi"]
+    answers:Array<string> = ["hola", "loquito"]
     expression:string = '3 + 5 \\cup '
     gameProblem:GameProblem = new GameProblem('2 + 4', '2 + 4 = 6', ['2', '6', '10'], ['6']);
     gameLevel:GameLevel = new GameLevel([this.gameProblem], new ScoreConfig(10,10,true, [new ExtraScore()]));
