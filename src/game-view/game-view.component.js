@@ -23,11 +23,9 @@ var GameViewComponent = (function () {
     }
     GameViewComponent.prototype.ngOnInit = function () {
         var _this = this;
-        console.log('game-view component');
         this.toolbarConfig = new toolbar_component_1.ToolbarConfig();
         this.gameInstance = this.currentGameInstance.getGameInstance();
         this.gameStatus.subjectLevel.subscribe(function (level) {
-            console.log("new level", level);
             _this.loadingLevel();
         });
         this.gameStatus.subjectGameOver.subscribe(function (gameOverType) { return _this.gameOver(gameOverType); });
@@ -37,13 +35,11 @@ var GameViewComponent = (function () {
     GameViewComponent.prototype.loadGame = function () {
         var _this = this;
         this.gameStatus.subjectLevel.subscribe(function (level) {
-            console.log("new level", level);
             _this.loadingLevel();
         });
         this.startGame();
     };
     GameViewComponent.prototype.startGame = function () {
-        // this.gameInstance = this.matesServices.getGameInstance();
         this.gameStatus.startGame(this.gameInstance.levels);
         this.loadingLevel();
         console.log(this.gameInstance);
@@ -60,11 +56,8 @@ var GameViewComponent = (function () {
         this.gameDisplay = "block";
     };
     GameViewComponent.prototype.gameOver = function (gameOver) {
-        console.log(gameOver);
         this.gameOverType = gameOver;
-        console.log('ViewStatus', this.viewStatus);
         this.viewStatus = ViewStatus.GAME_OVER;
-        console.log('ViewStatus', this.viewStatus);
         this.gameDisplay = "none";
         this.appRef.tick();
     };

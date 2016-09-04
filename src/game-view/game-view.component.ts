@@ -1,4 +1,4 @@
-import {Component, ApplicationRef, OnInit} from '@angular/core';
+import {Component, ApplicationRef, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import * as models from '../models';
 import {ToolbarConfig} from "../commons/toolbar/toolbar.component";
 import {GameStatusService} from "../services/game-status.service";
@@ -20,19 +20,13 @@ export class GameViewComponent implements OnInit{
   toolbarConfig:ToolbarConfig
 
   ngOnInit(){
-    console.log('game-view component')
-
     this.toolbarConfig = new ToolbarConfig()
-
     this.gameInstance = this.currentGameInstance.getGameInstance()
     this.gameStatus.subjectLevel.subscribe(level => {
-      console.log("new level", level);
       this.loadingLevel();
-    } );
+    });
 
     this.gameStatus.subjectGameOver.subscribe(gameOverType => this.gameOver(gameOverType))
-
-
     this.startGame();
   }
 
@@ -40,24 +34,20 @@ export class GameViewComponent implements OnInit{
     private gameStatus:GameStatusService,
     private currentGameInstance:CurrentGameInstance,
     private appRef:ApplicationRef
-    ){  };
+  ){};
 
 
   loadGame(){
     this.gameStatus.subjectLevel.subscribe(level => {
-      console.log("new level", level);
       this.loadingLevel();
-    } );
+    });
 
     this.startGame();
   }
 
   startGame(){
-    // this.gameInstance = this.matesServices.getGameInstance();
     this.gameStatus.startGame(this.gameInstance.levels);
-
     this.loadingLevel();
-
     console.log(this.gameInstance);
   }
 
@@ -77,11 +67,8 @@ export class GameViewComponent implements OnInit{
   }
 
   gameOver(gameOver:models.GameOverType){
-    console.log(gameOver)
     this.gameOverType = gameOver;
-    console.log('ViewStatus',this.viewStatus)
     this.viewStatus = ViewStatus.GAME_OVER
-    console.log('ViewStatus',this.viewStatus)
     this.gameDisplay = "none";
     this.appRef.tick()
   }

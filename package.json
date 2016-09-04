@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "build": "rm -rf lib && tsc -p src",
+    "build": "rm -rf lib && gulp copy:assets && tsc -p src ",
     "lite": "lite-server",
     "postinstall": "typings install",
     "tsc": "tsc",

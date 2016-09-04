@@ -45,7 +45,7 @@ export class CurrentGameInstance{
                 "{-7}",
                 "{2}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{5}",
                 "{2}"
               ]
@@ -60,7 +60,7 @@ export class CurrentGameInstance{
                 "{5}",
                 "{6}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{3}",
                 "{5}"
               ]
@@ -75,7 +75,7 @@ export class CurrentGameInstance{
                 "{4}",
                 "{2}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{3}",
                 "{2}"
               ]
@@ -90,7 +90,7 @@ export class CurrentGameInstance{
                 "{-1}",
                 "{3}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{2}",
                 "{5}"
               ]
@@ -105,7 +105,7 @@ export class CurrentGameInstance{
                 "{10}",
                 "{4}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{4}",
                 "{4}"
               ]
@@ -161,7 +161,7 @@ export class CurrentGameInstance{
                 "Falso",
                 "Contradicción"
               ],
-              "correctAnswer": [
+              "answer": [
                 "Falso"
               ]
             },
@@ -217,7 +217,7 @@ export class CurrentGameInstance{
                 "{-12}",
                 "{-4}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{-2}"
               ]
             },
@@ -231,7 +231,7 @@ export class CurrentGameInstance{
                 "{7}",
                 "{15}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{7}"
               ]
             },
@@ -245,7 +245,7 @@ export class CurrentGameInstance{
                 "{14}",
                 "{-4}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{6}"
               ]
             },
@@ -259,7 +259,7 @@ export class CurrentGameInstance{
                 "{-2}",
                 "{2}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{6}"
               ]
             },
@@ -273,7 +273,7 @@ export class CurrentGameInstance{
                 "{-11}",
                 "{-2}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{-2}"
               ]
             }
@@ -314,7 +314,7 @@ export class CurrentGameInstance{
                 "x = {-6}\\: y = {-5}",
                 "x = {-4}\\: y = {-3}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "x = {4}\\: y = {5}"
               ]
             },
@@ -326,7 +326,7 @@ export class CurrentGameInstance{
                 "x = {2}\\: y = {2}",
                 "x = {-6}\\: y = {-5}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "x = {2}\\: y = {2}"
               ]
             },
@@ -338,7 +338,7 @@ export class CurrentGameInstance{
                 "x = {-6}\\: y = {-5}",
                 "x = {-4}\\: y = {-3}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "x = {4}\\: y = {1}"
               ]
             }
@@ -380,7 +380,7 @@ export class CurrentGameInstance{
                 "{3}",
                 "{0}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{1}"
               ]
             },
@@ -391,7 +391,7 @@ export class CurrentGameInstance{
                 "{1}",
                 "{0}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{0}"
               ]
             },
@@ -403,7 +403,7 @@ export class CurrentGameInstance{
                 "{2}",
                 "{0}"
               ],
-              "correctAnswer": [
+              "answer": [
                 "{1}"
               ]
             }
