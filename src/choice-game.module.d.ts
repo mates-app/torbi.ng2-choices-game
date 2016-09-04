@@ -1,2 +1,2 @@
-export declare class BlogModule {
+export declare class ChoiceGameModule {
 }

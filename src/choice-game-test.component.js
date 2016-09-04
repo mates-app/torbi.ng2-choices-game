@@ -14,8 +14,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var models_1 = require('./models');
 var toolbar_component_1 = require("./commons/toolbar/toolbar.component");
-var TbtPost = (function () {
-    function TbtPost() {
+var ChoiceGameTest = (function () {
+    function ChoiceGameTest() {
         this.answers = ["hola", "barbi"];
         this.expression = '3 + 5 \\cup ';
         this.gameProblem = new models_1.GameProblem('2 + 4', '2 + 4 = 6', ['2', '6', '10'], ['6']);
@@ -26,15 +26,15 @@ var TbtPost = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', models_1.Post)
-    ], TbtPost.prototype, "post", void 0);
-    TbtPost = __decorate([
+    ], ChoiceGameTest.prototype, "post", void 0);
+    ChoiceGameTest = __decorate([
         core_1.Component({
             selector: 'tbt-post',
             template: "\n        <game-toolbar></game-toolbar>\n        <game-view></game-view>\n        <level-play\n            [gameProblem]=\"gameProblem\"\n            [gameLevel]=\"gameLevel\"\n            [toolbarConfig]=\"toolbarConfig\"\n        ></level-play>\n        <level-load></level-load>\n        <h1>{{post.title}}</h1>\n        <h6>{{post.author}} {{post.date}}</h6>\n        <h5>{{post.content}}</h5>\n        <answer-buttons [answers]=\"answers\">\n        </answer-buttons>\n        <math-problem-expression [problemExpression]=\"expression\"></math-problem-expression>\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], TbtPost);
-    return TbtPost;
+    ], ChoiceGameTest);
+    return ChoiceGameTest;
 }());
-exports.TbtPost = TbtPost;
-//# sourceMappingURL=post.component.js.map
+exports.ChoiceGameTest = ChoiceGameTest;
+//# sourceMappingURL=choice-game-test.component.js.map

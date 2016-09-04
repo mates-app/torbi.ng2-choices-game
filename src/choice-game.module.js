@@ -13,8 +13,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var post_component_1 = require('./post.component');
-var comments_component_1 = require('./comments.component');
 var answer_buttons_component_1 = require("./commons/answer-buttons/answer-buttons.component");
 var card_1 = require('@angular2-material/card');
 var button_1 = require('@angular2-material/button');
@@ -32,26 +30,25 @@ var counter_component_1 = require("./commons/counter/counter.component");
 var level_load_component_1 = require("./level-load/level-load.component");
 var level_play_component_1 = require("./level-play/level-play.component");
 var game_view_component_1 = require("./game-view/game-view.component");
-var BlogModule = (function () {
-    function BlogModule() {
+var choice_game_test_component_1 = require("./choice-game-test.component");
+var ChoiceGameModule = (function () {
+    function ChoiceGameModule() {
     }
-    BlogModule = __decorate([
+    ChoiceGameModule = __decorate([
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
                 button_1.MdButtonModule,
                 icon_1.MdIconModule,
                 card_1.MdCardModule,
-                grid_list_1.MdGridListModule,
+                grid_list_1.MdGridListModule
             ],
             exports: [
-                comments_component_1.TbtComments,
-                post_component_1.TbtPost,
-                counter_component_1.CounterComponent
+                choice_game_test_component_1.ChoiceGameTest,
+                game_view_component_1.GameViewComponent
             ],
             declarations: [
-                comments_component_1.TbtComments,
-                post_component_1.TbtPost,
+                choice_game_test_component_1.ChoiceGameTest,
                 answer_buttons_component_1.AnswerButtonsComponent,
                 counter_component_1.CounterComponent,
                 mathjax_directive_1.MathJaxDirective,
@@ -67,11 +64,11 @@ var BlogModule = (function () {
                 game_status_service_1.GameStatusService,
                 current_game_service_1.CurrentGameInstance
             ],
-            bootstrap: [post_component_1.TbtPost]
+            bootstrap: [choice_game_test_component_1.ChoiceGameTest]
         }), 
         __metadata('design:paramtypes', [])
-    ], BlogModule);
-    return BlogModule;
+    ], ChoiceGameModule);
+    return ChoiceGameModule;
 }());
-exports.BlogModule = BlogModule;
-//# sourceMappingURL=blog.module.js.map
+exports.ChoiceGameModule = ChoiceGameModule;
+//# sourceMappingURL=choice-game.module.js.map
