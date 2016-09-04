@@ -1,0 +1,77 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+/**
+ * Created by josecullen on 28/08/16.
+ */
+var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var post_component_1 = require('./post.component');
+var comments_component_1 = require('./comments.component');
+var answer_buttons_component_1 = require("./commons/answer-buttons/answer-buttons.component");
+var card_1 = require('@angular2-material/card');
+var button_1 = require('@angular2-material/button');
+var grid_list_1 = require('@angular2-material/grid-list');
+var icon_1 = require('@angular2-material/icon');
+// import { MdToolbarModule } from '@angular2-material/toolbar';
+var mathjax_directive_1 = require("./commons/mathjax/mathjax.directive");
+var math_problem_expression_component_1 = require("./commons/math-problem-expression/math-problem-expression.component");
+var popup_component_1 = require("./commons/popup/popup.component");
+var timer_service_1 = require("./services/timer.service");
+var game_status_service_1 = require("./services/game-status.service");
+var current_game_service_1 = require("./services/current-game.service");
+var toolbar_component_1 = require("./commons/toolbar/toolbar.component");
+var counter_component_1 = require("./commons/counter/counter.component");
+var level_load_component_1 = require("./level-load/level-load.component");
+var level_play_component_1 = require("./level-play/level-play.component");
+var game_view_component_1 = require("./game-view/game-view.component");
+var BlogModule = (function () {
+    function BlogModule() {
+    }
+    BlogModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                platform_browser_1.BrowserModule,
+                button_1.MdButtonModule,
+                icon_1.MdIconModule,
+                card_1.MdCardModule,
+                grid_list_1.MdGridListModule,
+            ],
+            exports: [
+                comments_component_1.TbtComments,
+                post_component_1.TbtPost,
+                counter_component_1.CounterComponent
+            ],
+            declarations: [
+                comments_component_1.TbtComments,
+                post_component_1.TbtPost,
+                answer_buttons_component_1.AnswerButtonsComponent,
+                counter_component_1.CounterComponent,
+                mathjax_directive_1.MathJaxDirective,
+                math_problem_expression_component_1.MathProblemExpression,
+                popup_component_1.PopupComponent,
+                toolbar_component_1.ToolbarComponent,
+                level_load_component_1.LoadingLevelComponent,
+                level_play_component_1.PlayingLevelComponent,
+                game_view_component_1.GameViewComponent
+            ],
+            providers: [
+                timer_service_1.TimerService,
+                game_status_service_1.GameStatusService,
+                current_game_service_1.CurrentGameInstance
+            ],
+            bootstrap: [post_component_1.TbtPost]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], BlogModule);
+    return BlogModule;
+}());
+exports.BlogModule = BlogModule;
+//# sourceMappingURL=blog.module.js.map
