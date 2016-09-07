@@ -2,10 +2,10 @@ import { ApplicationRef, OnInit } from '@angular/core';
 import * as models from '../models';
 import { ToolbarConfig } from "../commons/toolbar/toolbar.component";
 import { GameStatusService } from "../services/game-status.service";
-import { CurrentGameInstance } from "../services/current-game.service";
+import { GameControl } from "../services/GameControl";
 export declare class GameViewComponent implements OnInit {
     private gameStatus;
-    private currentGameInstance;
+    private gameControl;
     private appRef;
     title: string;
     gameInstance: models.GameInstance;
@@ -13,8 +13,8 @@ export declare class GameViewComponent implements OnInit {
     gameDisplay: string;
     gameOverType: models.GameOverType;
     toolbarConfig: ToolbarConfig;
+    constructor(gameStatus: GameStatusService, gameControl: GameControl, appRef: ApplicationRef);
     ngOnInit(): void;
-    constructor(gameStatus: GameStatusService, currentGameInstance: CurrentGameInstance, appRef: ApplicationRef);
     loadGame(): void;
     startGame(): void;
     /***************/

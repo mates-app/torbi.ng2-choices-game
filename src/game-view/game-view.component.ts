@@ -1,8 +1,8 @@
-import {Component, ApplicationRef, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, ApplicationRef, OnInit} from '@angular/core';
 import * as models from '../models';
 import {ToolbarConfig} from "../commons/toolbar/toolbar.component";
 import {GameStatusService} from "../services/game-status.service";
-import {CurrentGameInstance} from "../services/current-game.service";
+import {GameControl} from "../services/GameControl";
 
 @Component({
   moduleId: module.id,
@@ -14,27 +14,41 @@ import {CurrentGameInstance} from "../services/current-game.service";
 export class GameViewComponent implements OnInit{
   title = 'game-mates';
   gameInstance:models.GameInstance;
-  viewStatus:ViewStatus = ViewStatus.LOADING_LEVEL;
+  viewStatus:ViewStatus = ViewStatus.NOT_STARTED_GAME;
   gameDisplay:string = "block";
   gameOverType:models.GameOverType
   toolbarConfig:ToolbarConfig
 
+
+
+  constructor(
+    private gameStatus:GameStatusService,
+    private gameControl:GameControl,
+    private appRef:ApplicationRef
+  ){
+
+
+  };
+
   ngOnInit(){
     this.toolbarConfig = new ToolbarConfig()
-    this.gameInstance = this.currentGameInstance.getGameInstance()
+    // this.gameInstance = this.currentGameInstance.getGameInstance()
+
+    this.gameControl
+        .onGameInstanceChange()
+        .subscribe(gameInstance => this.gameInstance = gameInstance)
+
+    this.gameControl
+        .onStart()
+        .subscribe( isStarted => this.startGame())
+
     this.gameStatus.subjectLevel.subscribe(level => {
       this.loadingLevel();
     });
 
     this.gameStatus.subjectGameOver.subscribe(gameOverType => this.gameOver(gameOverType))
-    this.startGame();
+    // this.startGame();
   }
-
-  constructor(
-    private gameStatus:GameStatusService,
-    private currentGameInstance:CurrentGameInstance,
-    private appRef:ApplicationRef
-  ){};
 
 
   loadGame(){
@@ -48,7 +62,6 @@ export class GameViewComponent implements OnInit{
   startGame(){
     this.gameStatus.startGame(this.gameInstance.levels);
     this.loadingLevel();
-    console.log(this.gameInstance);
   }
 
 

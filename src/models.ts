@@ -6,14 +6,14 @@ export class GameInstance{
     constructor(
         public instanceId:string = "",
         public gameId:string = "",
-        public levels:Array<GameLevel> = new Array()
+        public levels:Array<GameLevel> = [new GameLevel()]
     ){}
 }
 
 export class GameLevel{
     constructor(
-        public gameProblems:Array<GameProblem>,
-        public scoreConfig:ScoreConfig
+        public gameProblems:Array<GameProblem> = [new GameProblem()],
+        public scoreConfig:ScoreConfig = new ScoreConfig()
     ){}
 }
 
@@ -28,10 +28,10 @@ export class GameProblem{
 
 export class ScoreConfig{
     constructor(
-        public baseScore:number,
-        public preCount:number,
-        public withTime:boolean,
-        public extras:Array<ExtraScore>
+        public baseScore:number = 0,
+        public preCount:number = 0,
+        public withTime:boolean = true,
+        public extras:Array<ExtraScore> = [new ExtraScore()]
     ){}
 }
 
@@ -59,13 +59,3 @@ export enum GameOverType{
     TIME, LEVELS, LIVES
 }
 
-
-
-export class Post{
-    constructor(
-        public author:string,
-        public date:string,
-        public title:string,
-        public content:string
-    ){}
-}

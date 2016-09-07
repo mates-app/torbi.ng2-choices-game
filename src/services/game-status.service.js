@@ -16,7 +16,6 @@ var GameStatusService = (function () {
     function GameStatusService(timer) {
         var _this = this;
         this.timer = timer;
-        // public subjectScore:Subject<number> = new Subject<number>();
         this.subjectScore = new Subject_1.Subject();
         this.subjectLevel = new Subject_1.Subject();
         this.subjectLives = new Subject_1.Subject();

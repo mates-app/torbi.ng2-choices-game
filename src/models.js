@@ -6,7 +6,7 @@ var GameInstance = (function () {
     function GameInstance(instanceId, gameId, levels) {
         if (instanceId === void 0) { instanceId = ""; }
         if (gameId === void 0) { gameId = ""; }
-        if (levels === void 0) { levels = new Array(); }
+        if (levels === void 0) { levels = [new GameLevel()]; }
         this.instanceId = instanceId;
         this.gameId = gameId;
         this.levels = levels;
@@ -16,6 +16,8 @@ var GameInstance = (function () {
 exports.GameInstance = GameInstance;
 var GameLevel = (function () {
     function GameLevel(gameProblems, scoreConfig) {
+        if (gameProblems === void 0) { gameProblems = [new GameProblem()]; }
+        if (scoreConfig === void 0) { scoreConfig = new ScoreConfig(); }
         this.gameProblems = gameProblems;
         this.scoreConfig = scoreConfig;
     }
@@ -38,6 +40,10 @@ var GameProblem = (function () {
 exports.GameProblem = GameProblem;
 var ScoreConfig = (function () {
     function ScoreConfig(baseScore, preCount, withTime, extras) {
+        if (baseScore === void 0) { baseScore = 0; }
+        if (preCount === void 0) { preCount = 0; }
+        if (withTime === void 0) { withTime = true; }
+        if (extras === void 0) { extras = [new ExtraScore()]; }
         this.baseScore = baseScore;
         this.preCount = preCount;
         this.withTime = withTime;
@@ -79,14 +85,4 @@ exports.Score = Score;
     GameOverType[GameOverType["LIVES"] = 2] = "LIVES";
 })(exports.GameOverType || (exports.GameOverType = {}));
 var GameOverType = exports.GameOverType;
-var Post = (function () {
-    function Post(author, date, title, content) {
-        this.author = author;
-        this.date = date;
-        this.title = title;
-        this.content = content;
-    }
-    return Post;
-}());
-exports.Post = Post;
 //# sourceMappingURL=models.js.map

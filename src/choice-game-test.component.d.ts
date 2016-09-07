@@ -1,10 +1,15 @@
-import { Post, GameProblem, GameLevel } from './models';
+import { GameProblem, GameLevel } from './models';
 import { ToolbarConfig } from "./commons/toolbar/toolbar.component";
+import { GameControl } from "./services/GameControl";
 export declare class ChoiceGameTest {
+    private gameControl;
     answers: Array<string>;
     expression: string;
     gameProblem: GameProblem;
     gameLevel: GameLevel;
     toolbarConfig: ToolbarConfig;
-    post: Post;
+    logs: string;
+    constructor(gameControl: GameControl);
+    setGame(): void;
+    start(): void;
 }

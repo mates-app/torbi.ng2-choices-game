@@ -2,11 +2,11 @@ import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import {TimerService} from './timer.service';
 import * as models from '../models';
+import {Observable, Observer} from "rxjs/Rx";
 
 @Injectable()
 export class GameStatusService{
   private gameLevels:Array<models.GameLevel>;
-  // public subjectScore:Subject<number> = new Subject<number>();
   public subjectScore:Subject<models.Score> = new Subject<models.Score>();
   public subjectLevel:Subject<number> = new Subject<number>();
   public subjectLives:Subject<number> = new Subject<number>();

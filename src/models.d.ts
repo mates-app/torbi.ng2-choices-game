@@ -10,7 +10,7 @@ export declare class GameInstance {
 export declare class GameLevel {
     gameProblems: Array<GameProblem>;
     scoreConfig: ScoreConfig;
-    constructor(gameProblems: Array<GameProblem>, scoreConfig: ScoreConfig);
+    constructor(gameProblems?: Array<GameProblem>, scoreConfig?: ScoreConfig);
 }
 export declare class GameProblem {
     problemExpression: string;
@@ -24,7 +24,7 @@ export declare class ScoreConfig {
     preCount: number;
     withTime: boolean;
     extras: Array<ExtraScore>;
-    constructor(baseScore: number, preCount: number, withTime: boolean, extras: Array<ExtraScore>);
+    constructor(baseScore?: number, preCount?: number, withTime?: boolean, extras?: Array<ExtraScore>);
 }
 export declare class ExtraScore {
     name: string;
@@ -43,11 +43,4 @@ export declare enum GameOverType {
     TIME = 0,
     LEVELS = 1,
     LIVES = 2,
-}
-export declare class Post {
-    author: string;
-    date: string;
-    title: string;
-    content: string;
-    constructor(author: string, date: string, title: string, content: string);
 }

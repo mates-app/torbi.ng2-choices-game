@@ -1,27 +1,32 @@
 /**
  * Created by josecullen on 30/08/16.
  */
-import { Component, Input } from '@angular/core';
-import {Post, GameProblem, GameLevel, ScoreConfig, ExtraScore} from './models'
+import { Component} from '@angular/core';
+import {GameProblem, GameLevel, ScoreConfig, ExtraScore, Score} from './models'
 import {ToolbarConfig} from "./commons/toolbar/toolbar.component";
+import {GameControl} from "./services/GameControl";
 
 @Component({
     selector: 'tbt-choices-game',
     template: `
-        <game-toolbar></game-toolbar>
+        <!--<game-toolbar></game-toolbar>-->
         <game-view></game-view>
-        <level-play
-            [gameProblem]="gameProblem"
-            [gameLevel]="gameLevel"
-            [toolbarConfig]="toolbarConfig"
-        ></level-play>
-        <level-load></level-load>
-        <h1>{{post.title}}</h1>
-        <h6>{{post.author}} {{post.date}}</h6>
-        <h5>{{post.content}}</h5>
-        <answer-buttons [answers]="answers">
-        </answer-buttons>
-        <math-problem-expression [problemExpression]="expression"></math-problem-expression>
+        <button (click)="setGame()">Set Game</button>
+        <button (click)="start()">Start</button>
+        
+        <p>{{logs}}</p>
+        <!--<level-play-->
+            <!--[gameProblem]="gameProblem"-->
+            <!--[gameLevel]="gameLevel"-->
+            <!--[toolbarConfig]="toolbarConfig"-->
+        <!--&gt;</level-play>-->
+        <!--<level-load></level-load>-->
+        <!--<h1>{{post.title}}</h1>-->
+        <!--<h6>{{post.author}} {{post.date}}</h6>-->
+        <!--<h5>{{post.content}}</h5>-->
+        <!--<answer-buttons [answers]="answers">-->
+        <!--</answer-buttons>-->
+        <!--<math-problem-expression [problemExpression]="expression"></math-problem-expression>-->
     `
 })
 export class ChoiceGameTest{
@@ -30,8 +35,26 @@ export class ChoiceGameTest{
     gameProblem:GameProblem = new GameProblem('2 + 4', '2 + 4 = 6', ['2', '6', '10'], ['6']);
     gameLevel:GameLevel = new GameLevel([this.gameProblem], new ScoreConfig(10,10,true, [new ExtraScore()]));
     toolbarConfig:ToolbarConfig = new ToolbarConfig();
+    logs:string = ''
 
-    @Input() post:Post = new Post('','','','')
+
+    constructor(
+        private gameControl:GameControl){
+
+        this.gameControl.onGameInstanceChange().subscribe(GameInstance => this.logs = 'Game Instance Change!')
+        this.gameControl.onStart().subscribe(() => this.logs = 'started!')
+        this.gameControl.onScoreChange().subscribe( (score:Score) => this.logs = `score to add : ${score.allScore()}`)
+
+    }
+
+    setGame(){
+        this.gameControl.setGameInstance(this.gameControl.gameMock)
+    }
+
+    start(){
+        this.gameControl.start()
+    }
+
 
 }
 

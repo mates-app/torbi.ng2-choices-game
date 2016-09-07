@@ -24,13 +24,13 @@ var math_problem_expression_component_1 = require("./commons/math-problem-expres
 var popup_component_1 = require("./commons/popup/popup.component");
 var timer_service_1 = require("./services/timer.service");
 var game_status_service_1 = require("./services/game-status.service");
-var current_game_service_1 = require("./services/current-game.service");
 var toolbar_component_1 = require("./commons/toolbar/toolbar.component");
 var counter_component_1 = require("./commons/counter/counter.component");
 var level_load_component_1 = require("./level-load/level-load.component");
 var level_play_component_1 = require("./level-play/level-play.component");
 var game_view_component_1 = require("./game-view/game-view.component");
 var choice_game_test_component_1 = require("./choice-game-test.component");
+var GameControl_1 = require("./services/GameControl");
 var ChoiceGameModule = (function () {
     function ChoiceGameModule() {
     }
@@ -62,7 +62,7 @@ var ChoiceGameModule = (function () {
             providers: [
                 timer_service_1.TimerService,
                 game_status_service_1.GameStatusService,
-                current_game_service_1.CurrentGameInstance
+                GameControl_1.GameControl
             ],
             bootstrap: [choice_game_test_component_1.ChoiceGameTest]
         }), 

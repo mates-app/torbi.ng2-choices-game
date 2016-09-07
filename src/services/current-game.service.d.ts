@@ -4,5 +4,4 @@ export declare class CurrentGameInstance {
     constructor();
     getGameInstance(): GameInstance;
     setCurrentInstance(gameInstance: GameInstance): void;
-    gameMock: GameInstance;
 }

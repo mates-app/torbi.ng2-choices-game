@@ -16,13 +16,13 @@ import {MathProblemExpression} from "./commons/math-problem-expression/math-prob
 import {PopupComponent} from "./commons/popup/popup.component";
 import {TimerService} from "./services/timer.service";
 import {GameStatusService} from "./services/game-status.service";
-import {CurrentGameInstance} from "./services/current-game.service";
 import {ToolbarComponent} from "./commons/toolbar/toolbar.component";
 import {CounterComponent} from "./commons/counter/counter.component";
 import {LoadingLevelComponent} from "./level-load/level-load.component";
 import {PlayingLevelComponent} from "./level-play/level-play.component";
 import {GameViewComponent} from "./game-view/game-view.component";
 import {ChoiceGameTest} from "./choice-game-test.component";
+import {GameControl} from "./services/GameControl";
 
 
 @NgModule({
@@ -50,9 +50,9 @@ import {ChoiceGameTest} from "./choice-game-test.component";
         GameViewComponent
     ],
     providers: [
-      TimerService,
-      GameStatusService,
-      CurrentGameInstance
+        TimerService,
+        GameStatusService,
+        GameControl
     ],
     bootstrap:    [ ChoiceGameTest ]
 })
