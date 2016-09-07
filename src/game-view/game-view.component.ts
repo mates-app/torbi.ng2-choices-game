@@ -36,11 +36,17 @@ export class GameViewComponent implements OnInit{
 
     this.gameControl
         .onGameInstanceChange()
-        .subscribe(gameInstance => this.gameInstance = gameInstance)
+        .subscribe(gameInstance => {
+          console.log('game-view onGameInstanceChange', gameInstance.gameId)
+          this.gameInstance = gameInstance
+        })
 
     this.gameControl
         .onStart()
-        .subscribe( isStarted => this.startGame())
+        .subscribe( isStarted => {
+          console.log('game-view onStart', isStarted)
+          this.startGame()
+        })
 
     this.gameStatus.subjectLevel.subscribe(level => {
       this.loadingLevel();

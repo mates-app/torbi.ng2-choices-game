@@ -9,7 +9,6 @@ import { MdCardModule } from '@angular2-material/card';
 import { MdButtonModule } from '@angular2-material/button';
 import { MdGridListModule } from '@angular2-material/grid-list';
 import { MdIconModule } from '@angular2-material/icon';
-// import { MdToolbarModule } from '@angular2-material/toolbar';
 
 import {MathJaxDirective} from "./commons/mathjax/mathjax.directive";
 import {MathProblemExpression} from "./commons/math-problem-expression/math-problem-expression.component";
