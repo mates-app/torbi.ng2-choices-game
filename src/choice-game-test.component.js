@@ -14,7 +14,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var models_1 = require('./models');
 var toolbar_component_1 = require("./commons/toolbar/toolbar.component");
-var GameControl_1 = require("./services/GameControl");
+var game_control_1 = require("./services/game-control");
 var ChoiceGameTest = (function () {
     function ChoiceGameTest(gameControl) {
         var _this = this;
@@ -40,7 +40,7 @@ var ChoiceGameTest = (function () {
             selector: 'tbt-choices-game',
             template: "\n        <!--<game-toolbar></game-toolbar>-->\n        <game-view></game-view>\n        <button (click)=\"setGame()\">Set Game</button>\n        <button (click)=\"start()\">Start</button>\n        \n        <p>{{logs}}</p>\n        <!--<level-play-->\n            <!--[gameProblem]=\"gameProblem\"-->\n            <!--[gameLevel]=\"gameLevel\"-->\n            <!--[toolbarConfig]=\"toolbarConfig\"-->\n        <!--&gt;</level-play>-->\n        <!--<level-load></level-load>-->\n        <!--<h1>{{post.title}}</h1>-->\n        <!--<h6>{{post.author}} {{post.date}}</h6>-->\n        <!--<h5>{{post.content}}</h5>-->\n        <!--<answer-buttons [answers]=\"answers\">-->\n        <!--</answer-buttons>-->\n        <!--<math-problem-expression [problemExpression]=\"expression\"></math-problem-expression>-->\n    "
         }), 
-        __metadata('design:paramtypes', [GameControl_1.GameControl])
+        __metadata('design:paramtypes', [game_control_1.GameControl])
     ], ChoiceGameTest);
     return ChoiceGameTest;
 }());

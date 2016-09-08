@@ -14,7 +14,7 @@ export class GameControl{
 
     public start(){
         this.gameStatusService.startGame(this.gameInstance.levels)
-        this._onStart.next()
+        this._onStart.next(true)
     }
 
     public pause(){

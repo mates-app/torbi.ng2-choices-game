@@ -2,7 +2,8 @@ import {Component, ApplicationRef, OnInit} from '@angular/core';
 import * as models from '../models';
 import {ToolbarConfig} from "../commons/toolbar/toolbar.component";
 import {GameStatusService} from "../services/game-status.service";
-import {GameControl} from "../services/GameControl";
+import {GameControl} from "../services/game-control";
+
 
 @Component({
   moduleId: module.id,
@@ -32,7 +33,7 @@ export class GameViewComponent implements OnInit{
 
   ngOnInit(){
     this.toolbarConfig = new ToolbarConfig()
-    // this.gameInstance = this.currentGameInstance.getGameInstance()
+    // this.gameInstance = this.gameControl.getGameInstance()
 
     this.gameControl
         .onGameInstanceChange()
@@ -45,7 +46,7 @@ export class GameViewComponent implements OnInit{
         .onStart()
         .subscribe( isStarted => {
           console.log('game-view onStart', isStarted)
-          this.startGame()
+          this.loadingLevel();
         })
 
     this.gameStatus.subjectLevel.subscribe(level => {
@@ -57,18 +58,18 @@ export class GameViewComponent implements OnInit{
   }
 
 
-  loadGame(){
-    this.gameStatus.subjectLevel.subscribe(level => {
-      this.loadingLevel();
-    });
+  // loadGame(){
+  //   this.gameStatus.subjectLevel.subscribe(level => {
+  //     this.loadingLevel();
+  //   });
+  //
+  //   this.startGame();
+  // }
 
-    this.startGame();
-  }
-
-  startGame(){
-    this.gameStatus.startGame(this.gameInstance.levels);
-    this.loadingLevel();
-  }
+  // startGame(){
+    // this.gameStatus.startGame(this.gameInstance.levels);
+    // this.loadingLevel();
+  // }
 
 
   /***************/

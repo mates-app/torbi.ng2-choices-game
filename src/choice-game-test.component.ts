@@ -4,7 +4,8 @@
 import { Component} from '@angular/core';
 import {GameProblem, GameLevel, ScoreConfig, ExtraScore, Score} from './models'
 import {ToolbarConfig} from "./commons/toolbar/toolbar.component";
-import {GameControl} from "./services/GameControl";
+import {GameControl} from "./services/game-control";
+
 
 @Component({
     selector: 'tbt-choices-game',

@@ -21,7 +21,7 @@ import {LoadingLevelComponent} from "./level-load/level-load.component";
 import {PlayingLevelComponent} from "./level-play/level-play.component";
 import {GameViewComponent} from "./game-view/game-view.component";
 import {ChoiceGameTest} from "./choice-game-test.component";
-import {GameControl} from "./services/GameControl";
+import {GameControl} from "./services/game-control";
 
 
 @NgModule({

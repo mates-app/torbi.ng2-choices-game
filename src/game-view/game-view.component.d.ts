@@ -2,7 +2,7 @@ import { ApplicationRef, OnInit } from '@angular/core';
 import * as models from '../models';
 import { ToolbarConfig } from "../commons/toolbar/toolbar.component";
 import { GameStatusService } from "../services/game-status.service";
-import { GameControl } from "../services/GameControl";
+import { GameControl } from "../services/game-control";
 export declare class GameViewComponent implements OnInit {
     private gameStatus;
     private gameControl;
@@ -15,8 +15,6 @@ export declare class GameViewComponent implements OnInit {
     toolbarConfig: ToolbarConfig;
     constructor(gameStatus: GameStatusService, gameControl: GameControl, appRef: ApplicationRef);
     ngOnInit(): void;
-    loadGame(): void;
-    startGame(): void;
     /***************/
     loadingLevel(): void;
     playLevel(): void;

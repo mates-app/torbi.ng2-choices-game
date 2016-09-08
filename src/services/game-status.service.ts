@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import {TimerService} from './timer.service';
 import * as models from '../models';
-import {Observable, Observer} from "rxjs/Rx";
 
 @Injectable()
 export class GameStatusService{

@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var toolbar_component_1 = require("../commons/toolbar/toolbar.component");
 var game_status_service_1 = require("../services/game-status.service");
-var GameControl_1 = require("../services/GameControl");
+var game_control_1 = require("../services/game-control");
 var GameViewComponent = (function () {
     function GameViewComponent(gameStatus, gameControl, appRef) {
         this.gameStatus = gameStatus;
@@ -25,7 +25,7 @@ var GameViewComponent = (function () {
     GameViewComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.toolbarConfig = new toolbar_component_1.ToolbarConfig();
-        // this.gameInstance = this.currentGameInstance.getGameInstance()
+        // this.gameInstance = this.gameControl.getGameInstance()
         this.gameControl
             .onGameInstanceChange()
             .subscribe(function (gameInstance) {
@@ -36,7 +36,7 @@ var GameViewComponent = (function () {
             .onStart()
             .subscribe(function (isStarted) {
             console.log('game-view onStart', isStarted);
-            _this.startGame();
+            _this.loadingLevel();
         });
         this.gameStatus.subjectLevel.subscribe(function (level) {
             _this.loadingLevel();
@@ -44,17 +44,17 @@ var GameViewComponent = (function () {
         this.gameStatus.subjectGameOver.subscribe(function (gameOverType) { return _this.gameOver(gameOverType); });
         // this.startGame();
     };
-    GameViewComponent.prototype.loadGame = function () {
-        var _this = this;
-        this.gameStatus.subjectLevel.subscribe(function (level) {
-            _this.loadingLevel();
-        });
-        this.startGame();
-    };
-    GameViewComponent.prototype.startGame = function () {
-        this.gameStatus.startGame(this.gameInstance.levels);
-        this.loadingLevel();
-    };
+    // loadGame(){
+    //   this.gameStatus.subjectLevel.subscribe(level => {
+    //     this.loadingLevel();
+    //   });
+    //
+    //   this.startGame();
+    // }
+    // startGame(){
+    // this.gameStatus.startGame(this.gameInstance.levels);
+    // this.loadingLevel();
+    // }
     /***************/
     GameViewComponent.prototype.loadingLevel = function () {
         this.viewStatus = ViewStatus.LOADING_LEVEL;
@@ -79,7 +79,7 @@ var GameViewComponent = (function () {
             templateUrl: 'game-view.component.html',
             styleUrls: ['game-view.component.css']
         }), 
-        __metadata('design:paramtypes', [game_status_service_1.GameStatusService, GameControl_1.GameControl, core_1.ApplicationRef])
+        __metadata('design:paramtypes', [game_status_service_1.GameStatusService, game_control_1.GameControl, core_1.ApplicationRef])
     ], GameViewComponent);
     return GameViewComponent;
 }());
