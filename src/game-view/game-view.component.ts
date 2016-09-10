@@ -54,23 +54,8 @@ export class GameViewComponent implements OnInit{
     });
 
     this.gameStatus.subjectGameOver.subscribe(gameOverType => this.gameOver(gameOverType))
-    // this.startGame();
+
   }
-
-
-  // loadGame(){
-  //   this.gameStatus.subjectLevel.subscribe(level => {
-  //     this.loadingLevel();
-  //   });
-  //
-  //   this.startGame();
-  // }
-
-  // startGame(){
-    // this.gameStatus.startGame(this.gameInstance.levels);
-    // this.loadingLevel();
-  // }
-
 
   /***************/
 

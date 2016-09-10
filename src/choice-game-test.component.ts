@@ -11,7 +11,13 @@ import {GameControl} from "./services/game-control";
     selector: 'tbt-choices-game',
     template: `
         <!--<game-toolbar></game-toolbar>-->
-        <game-view></game-view>
+        <game-view>
+            <level-load-body>
+                <h3>This is the body</h3>
+                    <p>Here we can inject the html to show when game-view shows de level-load</p>
+            </level-load-body>
+        </game-view>
+        
         <button (click)="setGame()">Set Game</button>
         <button (click)="start()">Start</button>
         

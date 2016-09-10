@@ -1,3 +1,8 @@
+header h1 {
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
 .footer {
   display: flex;
   flex-direction: column;

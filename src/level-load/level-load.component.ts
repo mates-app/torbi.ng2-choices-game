@@ -1,15 +1,19 @@
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {Component, Input, Output, EventEmitter, Directive} from '@angular/core';
 
 @Component({
   moduleId: module.id,
   selector: 'level-load',
   template: `
 <div class="flex-container">
-  <header></header>
+  <header>
+    <h1>Level {{level + 1}}</h1>    
+  </header>
 
   <br>
 
-  <section class="content"></section>
+  <section class="content">
+      <ng-content select="level-load-body"></ng-content>
+  </section>
 
   <br>
 
@@ -33,6 +37,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 export class LoadingLevelComponent{
   @Output('onStart') startLevelEmitter:EventEmitter<string> = new EventEmitter<string>();
   @Input() count:number = 3;
+  @Input() level:number = 1;
   @Output() countChange:EventEmitter<number> = new EventEmitter<number>();
   constructor(){
     this.startCountdown();
@@ -54,4 +59,8 @@ export class LoadingLevelComponent{
 }
 
 
+@Directive({
+  selector: 'level-load-body'
+})
+export class LevelLoadBody{}
 

@@ -42,19 +42,7 @@ var GameViewComponent = (function () {
             _this.loadingLevel();
         });
         this.gameStatus.subjectGameOver.subscribe(function (gameOverType) { return _this.gameOver(gameOverType); });
-        // this.startGame();
     };
-    // loadGame(){
-    //   this.gameStatus.subjectLevel.subscribe(level => {
-    //     this.loadingLevel();
-    //   });
-    //
-    //   this.startGame();
-    // }
-    // startGame(){
-    // this.gameStatus.startGame(this.gameInstance.levels);
-    // this.loadingLevel();
-    // }
     /***************/
     GameViewComponent.prototype.loadingLevel = function () {
         this.viewStatus = ViewStatus.LOADING_LEVEL;

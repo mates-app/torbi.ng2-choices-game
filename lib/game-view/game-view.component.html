@@ -2,7 +2,11 @@
 
   <level-load
     *ngIf="viewStatus == 2"
-    (onStart)="playLevel()" >
+    (onStart)="playLevel()"
+    [level]="gameStatus.level" >
+    <level-load-body>
+      <ng-content select="level-load-body"></ng-content>
+    </level-load-body>
   </level-load>
 
   <level-play
@@ -12,6 +16,7 @@
     [toolbarConfig]="toolbarConfig"
     (isCorrect)="gameStatus.onAnswer($event)"
     >
+
   </level-play>
 
   <!--<game-over-->

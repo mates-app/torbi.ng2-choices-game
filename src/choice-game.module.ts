@@ -17,7 +17,7 @@ import {TimerService} from "./services/timer.service";
 import {GameStatusService} from "./services/game-status.service";
 import {ToolbarComponent} from "./commons/toolbar/toolbar.component";
 import {CounterComponent} from "./commons/counter/counter.component";
-import {LoadingLevelComponent} from "./level-load/level-load.component";
+import {LoadingLevelComponent, LevelLoadBody} from "./level-load/level-load.component";
 import {PlayingLevelComponent} from "./level-play/level-play.component";
 import {GameViewComponent} from "./game-view/game-view.component";
 import {ChoiceGameTest} from "./choice-game-test.component";
@@ -34,7 +34,8 @@ import {GameControl} from "./services/game-control";
         ],
     exports: [
         ChoiceGameTest,
-        GameViewComponent
+        GameViewComponent,
+        LevelLoadBody
     ],
     declarations: [
         ChoiceGameTest,
@@ -46,7 +47,8 @@ import {GameControl} from "./services/game-control";
         ToolbarComponent,
         LoadingLevelComponent,
         PlayingLevelComponent,
-        GameViewComponent
+        GameViewComponent,
+        LevelLoadBody
     ],
     providers: [
         TimerService,

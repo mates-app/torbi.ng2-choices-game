@@ -44,7 +44,8 @@ var ChoiceGameModule = (function () {
             ],
             exports: [
                 choice_game_test_component_1.ChoiceGameTest,
-                game_view_component_1.GameViewComponent
+                game_view_component_1.GameViewComponent,
+                level_load_component_1.LevelLoadBody
             ],
             declarations: [
                 choice_game_test_component_1.ChoiceGameTest,
@@ -56,7 +57,8 @@ var ChoiceGameModule = (function () {
                 toolbar_component_1.ToolbarComponent,
                 level_load_component_1.LoadingLevelComponent,
                 level_play_component_1.PlayingLevelComponent,
-                game_view_component_1.GameViewComponent
+                game_view_component_1.GameViewComponent,
+                level_load_component_1.LevelLoadBody
             ],
             providers: [
                 timer_service_1.TimerService,
