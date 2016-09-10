@@ -27,7 +27,8 @@
         'input',
         'icon',
         'grid-list',
-        'list'
+        'list',
+        'progress-bar'
     ];
 
     materialPkgs.forEach((pkg) => {

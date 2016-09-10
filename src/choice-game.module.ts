@@ -22,7 +22,10 @@ import {PlayingLevelComponent} from "./level-play/level-play.component";
 import {GameViewComponent} from "./game-view/game-view.component";
 import {ChoiceGameTest} from "./choice-game-test.component";
 import {GameControl} from "./services/game-control";
-
+import {GameOverBody, GameOverComponent} from "./game-over/game-over.component";
+import {MdProgressBarModule} from "@angular2-material/progress-bar";
+// ,
+// MdProgressBarModule
 
 @NgModule({
     imports:      [
@@ -35,6 +38,7 @@ import {GameControl} from "./services/game-control";
     exports: [
         ChoiceGameTest,
         GameViewComponent,
+        GameOverBody,
         LevelLoadBody
     ],
     declarations: [
@@ -48,7 +52,9 @@ import {GameControl} from "./services/game-control";
         LoadingLevelComponent,
         PlayingLevelComponent,
         GameViewComponent,
-        LevelLoadBody
+        LevelLoadBody,
+        GameOverBody,
+        GameOverComponent
     ],
     providers: [
         TimerService,

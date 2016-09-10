@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {GameStatusService} from "./game-status.service";
 import {GameInstance, Score} from "../models";
-import {Subject, Observable} from "rxjs/Rx";
+import {Subject, Observable, Observer} from "rxjs/Rx";
 
 @Injectable()
 export class GameControl{
@@ -32,6 +32,20 @@ export class GameControl{
 
     public getGameInstance():GameInstance{
         return this.gameInstance
+    }
+
+    public runEffectivity():Observable<number>{
+        // return Observable.create((observer:Observer<number>) => {
+        //     let count = 0
+        //     let interval = setInterval(()=> {
+        //         count++;
+        //         if(count == 100){
+        //             observer.complete()
+        //             return clearInterval(interval);
+        //         }
+        //     }, 100)
+        // })
+        return null
     }
 
     public onStart():Observable<boolean>{

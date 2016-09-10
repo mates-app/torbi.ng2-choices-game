@@ -443,6 +443,19 @@ var GameControl = (function () {
     GameControl.prototype.getGameInstance = function () {
         return this.gameInstance;
     };
+    GameControl.prototype.runEffectivity = function () {
+        // return Observable.create((observer:Observer<number>) => {
+        //     let count = 0
+        //     let interval = setInterval(()=> {
+        //         count++;
+        //         if(count == 100){
+        //             observer.complete()
+        //             return clearInterval(interval);
+        //         }
+        //     }, 100)
+        // })
+        return null;
+    };
     GameControl.prototype.onStart = function () {
         return this._onStart;
     };

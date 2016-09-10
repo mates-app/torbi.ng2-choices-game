@@ -12,6 +12,7 @@ export declare class GameControl {
     resume(): void;
     setGameInstance(gameInstance: GameInstance): void;
     getGameInstance(): GameInstance;
+    runEffectivity(): Observable<number>;
     onStart(): Observable<boolean>;
     onGameInstanceChange(): Observable<GameInstance>;
     onScoreChange(): Observable<Score>;

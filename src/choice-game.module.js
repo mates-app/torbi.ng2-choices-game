@@ -30,6 +30,9 @@ var level_play_component_1 = require("./level-play/level-play.component");
 var game_view_component_1 = require("./game-view/game-view.component");
 var choice_game_test_component_1 = require("./choice-game-test.component");
 var game_control_1 = require("./services/game-control");
+var game_over_component_1 = require("./game-over/game-over.component");
+// ,
+// MdProgressBarModule
 var ChoiceGameModule = (function () {
     function ChoiceGameModule() {
     }
@@ -45,6 +48,7 @@ var ChoiceGameModule = (function () {
             exports: [
                 choice_game_test_component_1.ChoiceGameTest,
                 game_view_component_1.GameViewComponent,
+                game_over_component_1.GameOverBody,
                 level_load_component_1.LevelLoadBody
             ],
             declarations: [
@@ -58,7 +62,9 @@ var ChoiceGameModule = (function () {
                 level_load_component_1.LoadingLevelComponent,
                 level_play_component_1.PlayingLevelComponent,
                 game_view_component_1.GameViewComponent,
-                level_load_component_1.LevelLoadBody
+                level_load_component_1.LevelLoadBody,
+                game_over_component_1.GameOverBody,
+                game_over_component_1.GameOverComponent
             ],
             providers: [
                 timer_service_1.TimerService,
