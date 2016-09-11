@@ -48,7 +48,7 @@ export class EffectivityCircle implements OnInit{
     }
 
     ngOnInit():void {
-        console.log('this.wholeGame',this.wholeGame)
+        // console.log('this.wholeGame',this.wholeGame)
         this.replay()
     }
 
@@ -98,11 +98,11 @@ export class EffectivityCircle implements OnInit{
                 let bestScorePerProblem = level.scoreConfig.baseScore + level.scoreConfig.extras[0].extraScore
                 bestEffectivity += bestScorePerProblem * level.gameProblems.length
             }
-            console.log('score', this.gameStatus.score, 'bestEffectivity', bestEffectivity, 'effectivity', effectivity)
+            // console.log('score', this.gameStatus.score, 'bestEffectivity', bestEffectivity, 'effectivity', effectivity)
             effectivity = this.gameStatus.score * 100 / bestEffectivity
         }
 
-        console.log('effectivity',effectivity)
+        // console.log('effectivity',effectivity)
         return effectivity
     }
 

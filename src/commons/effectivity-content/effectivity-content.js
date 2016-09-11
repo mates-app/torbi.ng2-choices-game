@@ -48,7 +48,7 @@ var EffectivityContent = (function () {
             moduleId: module.id,
             selector: 'effectivity-content',
             styleUrls: ['effectivity-content.css'],
-            template: "\n        <h2>Progreso del Juego</h2>\n        <effectivity-circle #gameProgress [wholeGame]=\"true\"></effectivity-circle>\n        <h2>Efectividad</h2>\n        <effectivity-circle #effectivity [wholeGame]=\"isGameOver\"></effectivity-circle>\n\n"
+            template: "\n        <h2>Progreso del Juego</h2>\n        <effectivity-circle #gameProgress [wholeGame]=\"true\"></effectivity-circle>\n        <h2>Efectividad</h2>\n        <effectivity-circle #effectivity [wholeGame]=\"false\" [isGameOver]=\"isGameOver\"></effectivity-circle>\n\n"
         }), 
         __metadata('design:paramtypes', [game_control_1.GameControl])
     ], EffectivityContent);

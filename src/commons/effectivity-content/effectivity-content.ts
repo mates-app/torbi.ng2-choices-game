@@ -13,7 +13,7 @@ import {GameControl} from "../../services/game-control";
         <h2>Progreso del Juego</h2>
         <effectivity-circle #gameProgress [wholeGame]="true"></effectivity-circle>
         <h2>Efectividad</h2>
-        <effectivity-circle #effectivity [wholeGame]="isGameOver"></effectivity-circle>
+        <effectivity-circle #effectivity [wholeGame]="false" [isGameOver]="isGameOver"></effectivity-circle>
 
 `
 })
