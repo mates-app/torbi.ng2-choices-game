@@ -46,6 +46,10 @@ export class GameControl{
         return this.gameStatusService.subjectScore
     }
 
+    public onLevelChange():Observable<number>{
+        return this.gameStatusService.subjectLevel
+    }
+
     public onGameOver():Observable<GameOverType> {
         return this.gameStatusService.subjectGameOver
     }

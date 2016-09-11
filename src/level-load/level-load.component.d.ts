@@ -10,3 +10,5 @@ export declare class LoadingLevelComponent {
 }
 export declare class LevelLoadBody {
 }
+export declare class FirstLevelBody {
+}

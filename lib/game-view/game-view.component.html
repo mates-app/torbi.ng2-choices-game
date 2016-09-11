@@ -4,9 +4,15 @@
     *ngIf="viewStatus == 2"
     (onStart)="playLevel()"
     [level]="gameStatus.level" >
+
+    <first-level-body>
+      <ng-content select="first-level-body"></ng-content>
+    </first-level-body>
+
     <level-load-body>
       <ng-content select="level-load-body"></ng-content>
     </level-load-body>
+
   </level-load>
 
   <level-play

@@ -12,10 +12,18 @@ import {GameControl} from "./services/game-control";
     template: `
         <!--<game-toolbar></game-toolbar>-->
         <game-view>
+            <first-level-body>
+                <h2 style="color: ghostwhite">Enjoy the game!</h2>
+            </first-level-body>
             <level-load-body>
                 <h3>This is the body</h3>
-                    <p>Here we can inject the html to show when game-view shows de level-load</p>
+                <p>Here we can inject the html to show when game-view shows de level-load</p>
+                <effectivity-content></effectivity-content>                
             </level-load-body>
+            
+            <game-over-body>
+                <effectivity-content [isGameOver]="true"></effectivity-content>
+            </game-over-body>
         </game-view>
         
         <button (click)="setGame()">Set Game</button>

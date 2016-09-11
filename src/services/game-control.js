@@ -500,6 +500,9 @@ var GameControl = (function () {
     GameControl.prototype.onScoreChange = function () {
         return this.gameStatusService.subjectScore;
     };
+    GameControl.prototype.onLevelChange = function () {
+        return this.gameStatusService.subjectLevel;
+    };
     GameControl.prototype.onGameOver = function () {
         return this.gameStatusService.subjectGameOver;
     };

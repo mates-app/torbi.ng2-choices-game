@@ -3,7 +3,6 @@
  */
 import {Component, Input, Directive, OnInit} from '@angular/core';
 import {GameOverType} from "../models";
-import {GameControl} from "../services/game-control";
 
 @Component({
     moduleId: module.id,
@@ -20,11 +19,6 @@ import {GameControl} from "../services/game-control";
 
   <section class="content">
     <div class="sub-content">
-      <h2>Progreso del Juego</h2>
-      <effectivity-circle [wholeGame]="true" [isGameOver]="true"></effectivity-circle>
-      <h2>Efectividad</h2>
-      <effectivity-circle [wholeGame]="false" [isGameOver]="true"></effectivity-circle>
-
       <ng-content select="game-over-body"></ng-content>
     </div>
   </section>

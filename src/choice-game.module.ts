@@ -17,7 +17,7 @@ import {TimerService} from "./services/timer.service";
 import {GameStatusService} from "./services/game-status.service";
 import {ToolbarComponent} from "./commons/toolbar/toolbar.component";
 import {CounterComponent} from "./commons/counter/counter.component";
-import {LoadingLevelComponent, LevelLoadBody} from "./level-load/level-load.component";
+import {LoadingLevelComponent, LevelLoadBody, FirstLevelBody} from "./level-load/level-load.component";
 import {PlayingLevelComponent} from "./level-play/level-play.component";
 import {GameViewComponent} from "./game-view/game-view.component";
 import {ChoiceGameTest} from "./choice-game-test.component";
@@ -26,6 +26,7 @@ import {GameOverBody, GameOverComponent} from "./game-over/game-over.component";
 import {MdProgressBarModule} from "@angular2-material/progress-bar";
 import {MdProgressCircleModule} from "@angular2-material/progress-circle/progress-circle";
 import {EffectivityCircle} from "./commons/effectivity-circle/effectivity-circle.component";
+import {EffectivityContent} from "./commons/effectivity-content/effectivity-content";
 
 @NgModule({
     imports:      [
@@ -34,16 +35,16 @@ import {EffectivityCircle} from "./commons/effectivity-circle/effectivity-circle
         MdIconModule,
         MdCardModule,
         MdGridListModule,
-        MdProgressBarModule,
         MdProgressCircleModule
-
     ],
     exports: [
         ChoiceGameTest,
         GameViewComponent,
         GameOverBody,
         LevelLoadBody,
-        EffectivityCircle
+        FirstLevelBody,
+        EffectivityCircle,
+        EffectivityContent
     ],
     declarations: [
         ChoiceGameTest,
@@ -59,7 +60,9 @@ import {EffectivityCircle} from "./commons/effectivity-circle/effectivity-circle
         LevelLoadBody,
         GameOverBody,
         GameOverComponent,
-        EffectivityCircle
+        EffectivityCircle,
+        EffectivityContent,
+        FirstLevelBody
     ],
     providers: [
         TimerService,

@@ -15,6 +15,7 @@ export declare class GameControl {
     onStart(): Observable<boolean>;
     onGameInstanceChange(): Observable<GameInstance>;
     onScoreChange(): Observable<Score>;
+    onLevelChange(): Observable<number>;
     onGameOver(): Observable<GameOverType>;
     gameMock: GameInstance;
 }
