@@ -24,8 +24,8 @@ import {ChoiceGameTest} from "./choice-game-test.component";
 import {GameControl} from "./services/game-control";
 import {GameOverBody, GameOverComponent} from "./game-over/game-over.component";
 import {MdProgressBarModule} from "@angular2-material/progress-bar";
-// ,
-// MdProgressBarModule
+import {MdProgressCircleModule} from "@angular2-material/progress-circle/progress-circle";
+import {EffectivityCircle} from "./commons/effectivity-circle/effectivity-circle.component";
 
 @NgModule({
     imports:      [
@@ -33,13 +33,17 @@ import {MdProgressBarModule} from "@angular2-material/progress-bar";
         MdButtonModule,
         MdIconModule,
         MdCardModule,
-        MdGridListModule
-        ],
+        MdGridListModule,
+        MdProgressBarModule,
+        MdProgressCircleModule
+
+    ],
     exports: [
         ChoiceGameTest,
         GameViewComponent,
         GameOverBody,
-        LevelLoadBody
+        LevelLoadBody,
+        EffectivityCircle
     ],
     declarations: [
         ChoiceGameTest,
@@ -54,7 +58,8 @@ import {MdProgressBarModule} from "@angular2-material/progress-bar";
         GameViewComponent,
         LevelLoadBody,
         GameOverBody,
-        GameOverComponent
+        GameOverComponent,
+        EffectivityCircle
     ],
     providers: [
         TimerService,

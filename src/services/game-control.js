@@ -25,6 +25,48 @@ var GameControl = (function () {
                 {
                     "gameProblems": [
                         {
+                            "type": "text",
+                            "answerType": "text",
+                            "problemExpression": "Text question",
+                            "solvedExpression": null,
+                            "answerOptions": [
+                                "Response 1",
+                                "Response 2",
+                                "Response 3"
+                            ],
+                            "answer": [
+                                "Response 1"
+                            ]
+                        }],
+                    "scoreConfig": {
+                        "baseScore": 10,
+                        "preCount": 5,
+                        "withTime": true,
+                        "extras": [
+                            {
+                                "name": "Perfecto",
+                                "extraTime": 5,
+                                "extraScore": 5,
+                                "thresholdTime": 5
+                            },
+                            {
+                                "name": "Muy bien",
+                                "extraTime": 3,
+                                "extraScore": 3,
+                                "thresholdTime": 7
+                            },
+                            {
+                                "name": "Bien",
+                                "extraTime": 0,
+                                "extraScore": 1,
+                                "thresholdTime": 10
+                            }
+                        ]
+                    }
+                },
+                {
+                    "gameProblems": [
+                        {
                             "problemExpression": "{3}x^2 + {-21}x + {30} = 0",
                             "solvedExpression": null,
                             "answerOptions": [
@@ -129,6 +171,8 @@ var GameControl = (function () {
                 {
                     "gameProblems": [
                         {
+                            "type": "math",
+                            "answerType": "text",
                             "problemExpression": "( a \\land F )",
                             "solvedExpression": "",
                             "answerOptions": [
@@ -142,6 +186,8 @@ var GameControl = (function () {
                             ]
                         },
                         {
+                            "type": "math",
+                            "answerType": "text",
                             "problemExpression": "( T \\land b )",
                             "solvedExpression": "",
                             "answerOptions": [
@@ -155,6 +201,8 @@ var GameControl = (function () {
                             ]
                         },
                         {
+                            "type": "math",
+                            "answerType": "text",
                             "problemExpression": "( T \\Leftrightarrow b )",
                             "solvedExpression": "",
                             "answerOptions": [
@@ -163,7 +211,7 @@ var GameControl = (function () {
                                 "Falso",
                                 "Contradicción"
                             ],
-                            "correctAnswer": [
+                            "answer": [
                                 "Verdadero"
                             ]
                         }
@@ -443,19 +491,6 @@ var GameControl = (function () {
     GameControl.prototype.getGameInstance = function () {
         return this.gameInstance;
     };
-    GameControl.prototype.runEffectivity = function () {
-        // return Observable.create((observer:Observer<number>) => {
-        //     let count = 0
-        //     let interval = setInterval(()=> {
-        //         count++;
-        //         if(count == 100){
-        //             observer.complete()
-        //             return clearInterval(interval);
-        //         }
-        //     }, 100)
-        // })
-        return null;
-    };
     GameControl.prototype.onStart = function () {
         return this._onStart;
     };
@@ -464,6 +499,9 @@ var GameControl = (function () {
     };
     GameControl.prototype.onScoreChange = function () {
         return this.gameStatusService.subjectScore;
+    };
+    GameControl.prototype.onGameOver = function () {
+        return this.gameStatusService.subjectGameOver;
     };
     GameControl = __decorate([
         core_1.Injectable(), 

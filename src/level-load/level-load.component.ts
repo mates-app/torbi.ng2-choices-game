@@ -12,7 +12,15 @@ import {Component, Input, Output, EventEmitter, Directive} from '@angular/core';
   <br>
 
   <section class="content">
-      <ng-content select="level-load-body"></ng-content>
+      <div class="sub-content" *ngIf="level != 0">
+        <h2>Progreso del Juego</h2>
+        <effectivity-circle [wholeGame]="true"></effectivity-circle>
+        <h2>Efectividad</h2>
+        <effectivity-circle [wholeGame]="false"></effectivity-circle>
+
+        <ng-content select="level-load-body"></ng-content>
+      </div>
+      
   </section>
 
   <br>

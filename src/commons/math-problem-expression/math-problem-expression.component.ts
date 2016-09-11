@@ -5,7 +5,7 @@ import {Component, Input} from '@angular/core';
   selector: 'math-problem-expression',
   template: `
   <div style="margin-top: -10px; color: white">
-	<h3 [MathJax]="'$$'+problemExpression+'$$'"></h3>
+	<h1 style="color: white; " [MathJax]="'$$'+problemExpression+'$$'"></h1>
   </div>
   `
 })

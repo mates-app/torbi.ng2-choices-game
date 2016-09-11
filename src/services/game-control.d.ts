@@ -1,5 +1,5 @@
 import { GameStatusService } from "./game-status.service";
-import { GameInstance, Score } from "../models";
+import { GameInstance, Score, GameOverType } from "../models";
 import { Observable } from "rxjs/Rx";
 export declare class GameControl {
     private gameStatusService;
@@ -12,9 +12,9 @@ export declare class GameControl {
     resume(): void;
     setGameInstance(gameInstance: GameInstance): void;
     getGameInstance(): GameInstance;
-    runEffectivity(): Observable<number>;
     onStart(): Observable<boolean>;
     onGameInstanceChange(): Observable<GameInstance>;
     onScoreChange(): Observable<Score>;
+    onGameOver(): Observable<GameOverType>;
     gameMock: GameInstance;
 }

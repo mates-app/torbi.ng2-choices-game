@@ -17,7 +17,9 @@ export declare class GameProblem {
     solvedExpression: string;
     answerOptions: string[];
     answer: string[];
-    constructor(problemExpression?: string, solvedExpression?: string, answerOptions?: string[], answer?: string[]);
+    type: string;
+    answerType: string;
+    constructor(problemExpression?: string, solvedExpression?: string, answerOptions?: string[], answer?: string[], type?: string, answerType?: string);
 }
 export declare class ScoreConfig {
     baseScore: number;

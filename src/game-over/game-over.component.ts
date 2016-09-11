@@ -1,7 +1,7 @@
 /**
  * Created by josecullen on 10/09/16.
  */
-import {Component, Input, Output, EventEmitter, Directive} from '@angular/core';
+import {Component, Input, Directive, OnInit} from '@angular/core';
 import {GameOverType} from "../models";
 import {GameControl} from "../services/game-control";
 
@@ -10,6 +10,8 @@ import {GameControl} from "../services/game-control";
     selector: 'game-over',
     template: `
 <div class="flex-container">
+
+
   <header>
     <h1>Game Over</h1>    
   </header>
@@ -17,9 +19,14 @@ import {GameControl} from "../services/game-control";
   <br>
 
   <section class="content">
-      <!--<md-progress-circle mode="determinate" value="effectivity"></md-progress-circle>-->
+    <div class="sub-content">
+      <h2>Progreso del Juego</h2>
+      <effectivity-circle [wholeGame]="true" [isGameOver]="true"></effectivity-circle>
+      <h2>Efectividad</h2>
+      <effectivity-circle [wholeGame]="false" [isGameOver]="true"></effectivity-circle>
 
       <ng-content select="game-over-body"></ng-content>
+    </div>
   </section>
 
   <br>
@@ -34,19 +41,8 @@ import {GameControl} from "../services/game-control";
 
 })
 export class GameOverComponent{
+
     @Input() gameOverType:GameOverType
-    effectivity:number = 0
-
-
-    constructor(private gameControl:GameControl){
-        this.gameControl.runEffectivity().subscribe(
-            value => this.effectivity = value
-        )
-    }
-
-    runEffectivity(){
-
-    }
 
 
 

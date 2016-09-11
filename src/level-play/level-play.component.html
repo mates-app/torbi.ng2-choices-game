@@ -11,10 +11,15 @@
           *ngFor="let gameProblemm of gameLevel.gameProblems; let i = index"
           [ngStyle]="{'display': displayProblem(i)}"
           style="margin: auto">
+
   <math-problem-expression
           style="margin: auto"
+          *ngIf="gameProblem.type == undefined || gameProblem.type == 'math'"
     [problemExpression]="gameProblemm.problemExpression">
   </math-problem-expression>
+
+    <h2 style="color: white"
+            *ngIf="gameProblem.type != undefined && gameProblem.type == 'text'">{{gameProblemm.problemExpression}}</h2>
 
   </div>
 
@@ -26,6 +31,7 @@
   *ngFor="let gameProblemm of gameLevel.gameProblems; let i = index"
   [ngStyle]="{'display': displayProblem(i)}">
   <answer-buttons
+    [isMath]="gameProblem.type == undefined || gameProblem.type == 'math'"
     [answers]="gameProblemm.answerOptions"
     (answer)="processAnswer($event)">
   </answer-buttons>

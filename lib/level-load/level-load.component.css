@@ -25,7 +25,9 @@ header h1 {
 section.content {
   display: flex;
   flex-direction: column;
-  background-color: #DB4646;
+  text-align: -webkit-center;
+  /*background-color: #E9DC51;*/
+  background-color: #DB4F4F;
   flex: 1;
 }
 
@@ -34,3 +36,11 @@ footer {
   background-color: #DB4646;
   color: #333;
 }
+
+div.sub-content {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(15%);
+  flex: 1;
+}
+

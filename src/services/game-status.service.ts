@@ -69,6 +69,7 @@ export class GameStatusService{
     // scoreToAdd += extras.extraScore;
     this.timer.gameTimer.plusTime(extras.extraTime);
     // this.subjectScore.next(this.score += scoreToAdd);
+    this.score += scoreToAdd + extras.extraScore
     this.subjectScore.next(new models.Score(scoreToAdd, extras.extraScore));
   }
 

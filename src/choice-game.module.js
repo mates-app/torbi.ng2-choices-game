@@ -31,8 +31,9 @@ var game_view_component_1 = require("./game-view/game-view.component");
 var choice_game_test_component_1 = require("./choice-game-test.component");
 var game_control_1 = require("./services/game-control");
 var game_over_component_1 = require("./game-over/game-over.component");
-// ,
-// MdProgressBarModule
+var progress_bar_1 = require("@angular2-material/progress-bar");
+var progress_circle_1 = require("@angular2-material/progress-circle/progress-circle");
+var effectivity_circle_component_1 = require("./commons/effectivity-circle/effectivity-circle.component");
 var ChoiceGameModule = (function () {
     function ChoiceGameModule() {
     }
@@ -43,13 +44,16 @@ var ChoiceGameModule = (function () {
                 button_1.MdButtonModule,
                 icon_1.MdIconModule,
                 card_1.MdCardModule,
-                grid_list_1.MdGridListModule
+                grid_list_1.MdGridListModule,
+                progress_bar_1.MdProgressBarModule,
+                progress_circle_1.MdProgressCircleModule
             ],
             exports: [
                 choice_game_test_component_1.ChoiceGameTest,
                 game_view_component_1.GameViewComponent,
                 game_over_component_1.GameOverBody,
-                level_load_component_1.LevelLoadBody
+                level_load_component_1.LevelLoadBody,
+                effectivity_circle_component_1.EffectivityCircle
             ],
             declarations: [
                 choice_game_test_component_1.ChoiceGameTest,
@@ -64,7 +68,8 @@ var ChoiceGameModule = (function () {
                 game_view_component_1.GameViewComponent,
                 level_load_component_1.LevelLoadBody,
                 game_over_component_1.GameOverBody,
-                game_over_component_1.GameOverComponent
+                game_over_component_1.GameOverComponent,
+                effectivity_circle_component_1.EffectivityCircle
             ],
             providers: [
                 timer_service_1.TimerService,

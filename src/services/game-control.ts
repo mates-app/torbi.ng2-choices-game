@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {GameStatusService} from "./game-status.service";
-import {GameInstance, Score} from "../models";
+import {GameInstance, Score, GameOverType} from "../models";
 import {Subject, Observable, Observer} from "rxjs/Rx";
 
 @Injectable()
@@ -34,20 +34,6 @@ export class GameControl{
         return this.gameInstance
     }
 
-    public runEffectivity():Observable<number>{
-        // return Observable.create((observer:Observer<number>) => {
-        //     let count = 0
-        //     let interval = setInterval(()=> {
-        //         count++;
-        //         if(count == 100){
-        //             observer.complete()
-        //             return clearInterval(interval);
-        //         }
-        //     }, 100)
-        // })
-        return null
-    }
-
     public onStart():Observable<boolean>{
         return this._onStart
     }
@@ -60,16 +46,69 @@ export class GameControl{
         return this.gameStatusService.subjectScore
     }
 
+    public onGameOver():Observable<GameOverType> {
+        return this.gameStatusService.subjectGameOver
+    }
 
 
 
 
 
-    gameMock:GameInstance = <GameInstance>{
+
+        gameMock:GameInstance = <GameInstance>{
         "instanceId": "576322f4af21d21adc4adabf",
         "gameId": "5762d2b63e68b5130b5fcd03",
         "levels": [
+
+
             {
+                "gameProblems": [
+                    {
+                        "type": "text",
+                        "answerType" : "text",
+                        "problemExpression": "Text question",
+                        "solvedExpression": null,
+                        "answerOptions": [
+                            "Response 1",
+                            "Response 2",
+                            "Response 3"
+                        ],
+                        "answer": [
+                            "Response 1"
+                        ]
+                    }],
+
+                "scoreConfig": {
+                    "baseScore": 10,
+                    "preCount": 5,
+                    "withTime": true,
+                    "extras": [
+                        {
+                            "name": "Perfecto",
+                            "extraTime": 5,
+                            "extraScore": 5,
+                            "thresholdTime": 5
+                        },
+                        {
+                            "name": "Muy bien",
+                            "extraTime": 3,
+                            "extraScore": 3,
+                            "thresholdTime": 7
+                        },
+                        {
+                            "name": "Bien",
+                            "extraTime": 0,
+                            "extraScore": 1,
+                            "thresholdTime": 10
+                        }
+                        ]
+                }
+            },
+
+
+
+
+                    {
                 "gameProblems": [
                     {
                         "problemExpression": "{3}x^2 + {-21}x + {30} = 0",
@@ -176,6 +215,8 @@ export class GameControl{
             {
                 "gameProblems": [
                     {
+                        "type" : "math",
+                        "answerType" : "text",
                         "problemExpression": "( a \\land F )",
                         "solvedExpression": "",
                         "answerOptions": [
@@ -189,6 +230,8 @@ export class GameControl{
                         ]
                     },
                     {
+                        "type" : "math",
+                        "answerType" : "text",
                         "problemExpression": "( T \\land b )",
                         "solvedExpression": "",
                         "answerOptions": [
@@ -202,6 +245,8 @@ export class GameControl{
                         ]
                     },
                     {
+                        "type" : "math",
+                        "answerType" : "text",
                         "problemExpression": "( T \\Leftrightarrow b )",
                         "solvedExpression": "",
                         "answerOptions": [
@@ -210,7 +255,7 @@ export class GameControl{
                             "Falso",
                             "Contradicción"
                         ],
-                        "correctAnswer": [
+                        "answer": [
                             "Verdadero"
                         ]
                     }

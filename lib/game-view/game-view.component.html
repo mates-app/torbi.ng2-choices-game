@@ -19,10 +19,13 @@
 
   </level-play>
 
-  <!--<game-over-->
-    <!--[gameOverType]="gameOverType"-->
-    <!--*ngIf="viewStatus == 4">-->
-  <!--</game-over>-->
+  <game-over
+    [gameOverType]="gameOverType"
+    *ngIf="viewStatus == 4">
+    <game-over-body>
+      <ng-content select="game-over-body"></ng-content>
+    </game-over-body>
+  </game-over>
 
 </div>
 

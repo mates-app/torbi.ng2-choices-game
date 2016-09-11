@@ -28,7 +28,8 @@
         'icon',
         'grid-list',
         'list',
-        'progress-bar'
+        'progress-bar',
+        'progress-circle'
     ];
 
     materialPkgs.forEach((pkg) => {
