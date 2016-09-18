@@ -3,17 +3,19 @@ import * as models from '../models';
 import { ToolbarConfig } from "../commons/toolbar/toolbar.component";
 import { GameStatusService } from "../services/game-status.service";
 import { GameControl } from "../services/game-control";
+import { MdIconRegistry } from '@angular2-material/icon';
 export declare class GameViewComponent implements OnInit {
     private gameStatus;
     private gameControl;
     private appRef;
+    private mdIconRegistry;
     title: string;
     gameInstance: models.GameInstance;
     viewStatus: ViewStatus;
     gameDisplay: string;
     gameOverType: models.GameOverType;
     toolbarConfig: ToolbarConfig;
-    constructor(gameStatus: GameStatusService, gameControl: GameControl, appRef: ApplicationRef);
+    constructor(gameStatus: GameStatusService, gameControl: GameControl, appRef: ApplicationRef, mdIconRegistry: MdIconRegistry);
     ngOnInit(): void;
     /***************/
     loadingLevel(): void;
