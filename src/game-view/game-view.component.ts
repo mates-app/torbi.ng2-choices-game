@@ -3,13 +3,14 @@ import * as models from '../models';
 import {ToolbarConfig} from "../commons/toolbar/toolbar.component";
 import {GameStatusService} from "../services/game-status.service";
 import {GameControl} from "../services/game-control";
-
+import {MdIconRegistry} from '@angular2-material/icon'
 
 @Component({
   moduleId: module.id,
   selector: 'game-view',
   templateUrl: 'game-view.component.html',
-  styleUrls: ['game-view.component.css']
+  styleUrls: ['game-view.component.css'],
+  viewProviders: [MdIconRegistry]
 
 })
 export class GameViewComponent implements OnInit{
@@ -25,9 +26,15 @@ export class GameViewComponent implements OnInit{
   constructor(
     private gameStatus:GameStatusService,
     private gameControl:GameControl,
-    private appRef:ApplicationRef
+    private appRef:ApplicationRef,
+    private mdIconRegistry:MdIconRegistry
   ){
 
+
+    mdIconRegistry
+        .addSvgIcon('thumb-up', '/game-mates/icon/assets/thumbup-icon.svg')
+        .addSvgIconSetInNamespace('core', '/game-mates/icon/assets/core-icon-set.svg')
+        .registerFontClassAlias('fontawesome', 'fa');
 
   };
 

@@ -15,7 +15,7 @@ export declare class Timer {
     timeObservable: Subject<number>;
     plusTimeSubject: Subject<number>;
     constructor(initialValue: number, countdown: boolean);
-    time: any;
+    readonly time: any;
     start(): void;
     restart(): void;
     stop(): void;

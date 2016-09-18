@@ -1,7 +1,7 @@
 /**
  * Created by josecullen on 30/08/16.
  */
-import { Component} from '@angular/core';
+import {Component, Directive, Input} from '@angular/core';
 import {GameProblem, GameLevel, ScoreConfig, ExtraScore, Score} from './models'
 import {ToolbarConfig} from "./commons/toolbar/toolbar.component";
 import {GameControl} from "./services/game-control";
@@ -73,3 +73,11 @@ export class ChoiceGameTest{
 
 }
 
+@Directive({
+    selector: 'md-progress-circle'
+})
+export class MdProgressCircleFake{
+    @Input() value:string
+
+
+}

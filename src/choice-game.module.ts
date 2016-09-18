@@ -1,7 +1,7 @@
 /**
  * Created by josecullen on 28/08/16.
  */
-import { NgModule }      from '@angular/core';
+import { NgModule, Directive }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {AnswerButtonsComponent} from "./commons/answer-buttons/answer-buttons.component";
 
@@ -20,11 +20,11 @@ import {CounterComponent} from "./commons/counter/counter.component";
 import {LoadingLevelComponent, LevelLoadBody, FirstLevelBody} from "./level-load/level-load.component";
 import {PlayingLevelComponent} from "./level-play/level-play.component";
 import {GameViewComponent} from "./game-view/game-view.component";
-import {ChoiceGameTest} from "./choice-game-test.component";
+import {ChoiceGameTest, MdProgressCircleFake} from "./choice-game-test.component";
 import {GameControl} from "./services/game-control";
 import {GameOverBody, GameOverComponent} from "./game-over/game-over.component";
 import {MdProgressBarModule} from "@angular2-material/progress-bar";
-import {MdProgressCircleModule} from "@angular2-material/progress-circle/progress-circle";
+import {MdProgressCircleModule} from "@angular2-material/progress-circle";
 import {EffectivityCircle} from "./commons/effectivity-circle/effectivity-circle.component";
 import {EffectivityContent} from "./commons/effectivity-content/effectivity-content";
 
@@ -62,7 +62,8 @@ import {EffectivityContent} from "./commons/effectivity-content/effectivity-cont
         GameOverComponent,
         EffectivityCircle,
         EffectivityContent,
-        FirstLevelBody
+        FirstLevelBody,
+        
     ],
     providers: [
         TimerService,
@@ -72,3 +73,6 @@ import {EffectivityContent} from "./commons/effectivity-content/effectivity-cont
     bootstrap:    [ ChoiceGameTest ]
 })
 export class ChoiceGameModule { }
+
+
+

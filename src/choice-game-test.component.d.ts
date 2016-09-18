@@ -13,3 +13,6 @@ export declare class ChoiceGameTest {
     setGame(): void;
     start(): void;
 }
+export declare class MdProgressCircleFake {
+    value: string;
+}
