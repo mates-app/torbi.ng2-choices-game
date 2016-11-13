@@ -12,12 +12,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by josecullen on 28/08/16.
  */
 var core_1 = require('@angular/core');
+var material_1 = require('@angular/material');
 var platform_browser_1 = require('@angular/platform-browser');
 var answer_buttons_component_1 = require("./commons/answer-buttons/answer-buttons.component");
-var card_1 = require('@angular2-material/card');
-var button_1 = require('@angular2-material/button');
-var grid_list_1 = require('@angular2-material/grid-list');
-var icon_1 = require('@angular2-material/icon');
 var mathjax_directive_1 = require("./commons/mathjax/mathjax.directive");
 var math_problem_expression_component_1 = require("./commons/math-problem-expression/math-problem-expression.component");
 var popup_component_1 = require("./commons/popup/popup.component");
@@ -31,7 +28,6 @@ var game_view_component_1 = require("./game-view/game-view.component");
 var choice_game_test_component_1 = require("./choice-game-test.component");
 var game_control_1 = require("./services/game-control");
 var game_over_component_1 = require("./game-over/game-over.component");
-var progress_circle_1 = require("@angular2-material/progress-circle");
 var effectivity_circle_component_1 = require("./commons/effectivity-circle/effectivity-circle.component");
 var effectivity_content_1 = require("./commons/effectivity-content/effectivity-content");
 var ChoiceGameModule = (function () {
@@ -41,11 +37,7 @@ var ChoiceGameModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                button_1.MdButtonModule,
-                icon_1.MdIconModule,
-                card_1.MdCardModule,
-                grid_list_1.MdGridListModule,
-                progress_circle_1.MdProgressCircleModule
+                material_1.MaterialModule.forRoot()
             ],
             exports: [
                 choice_game_test_component_1.ChoiceGameTest,

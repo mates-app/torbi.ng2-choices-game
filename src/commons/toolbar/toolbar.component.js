@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var icon_1 = require('@angular2-material/icon');
+var material_1 = require('@angular/material');
 var popup_component_1 = require("../popup/popup.component");
 var game_status_service_1 = require("../../services/game-status.service");
 var timer_service_1 = require("../../services/timer.service");
@@ -64,9 +64,9 @@ var ToolbarComponent = (function () {
             selector: 'game-toolbar',
             templateUrl: 'toolbar.component.html',
             styleUrls: ['toolbar.component.css'],
-            viewProviders: [icon_1.MdIconRegistry]
+            viewProviders: [material_1.MdIconRegistry]
         }), 
-        __metadata('design:paramtypes', [game_status_service_1.GameStatusService, timer_service_1.TimerService, icon_1.MdIconRegistry])
+        __metadata('design:paramtypes', [game_status_service_1.GameStatusService, timer_service_1.TimerService, material_1.MdIconRegistry])
     ], ToolbarComponent);
     return ToolbarComponent;
 }());

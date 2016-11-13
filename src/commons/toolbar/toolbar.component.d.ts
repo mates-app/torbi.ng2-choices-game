@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { MdIconRegistry } from '@angular2-material/icon';
+import { MdIconRegistry } from '@angular/material';
 import { PopupComponent } from "../popup/popup.component";
 import { GameStatusService } from "../../services/game-status.service";
 import { TimerService } from "../../services/timer.service";

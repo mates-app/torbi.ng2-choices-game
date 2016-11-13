@@ -3,7 +3,7 @@ import * as models from '../models';
 import {ToolbarConfig} from "../commons/toolbar/toolbar.component";
 import {GameStatusService} from "../services/game-status.service";
 import {GameControl} from "../services/game-control";
-import {MdIconRegistry} from '@angular2-material/icon'
+import {MdIconRegistry} from '@angular/material'
 
 @Component({
   moduleId: module.id,

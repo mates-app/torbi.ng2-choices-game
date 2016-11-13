@@ -2,13 +2,10 @@
  * Created by josecullen on 28/08/16.
  */
 import { NgModule, Directive }      from '@angular/core';
+import { MaterialModule }      from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import {AnswerButtonsComponent} from "./commons/answer-buttons/answer-buttons.component";
 
-import { MdCardModule } from '@angular2-material/card';
-import { MdButtonModule } from '@angular2-material/button';
-import { MdGridListModule } from '@angular2-material/grid-list';
-import { MdIconModule } from '@angular2-material/icon';
 
 import {MathJaxDirective} from "./commons/mathjax/mathjax.directive";
 import {MathProblemExpression} from "./commons/math-problem-expression/math-problem-expression.component";
@@ -23,19 +20,13 @@ import {GameViewComponent} from "./game-view/game-view.component";
 import {ChoiceGameTest, MdProgressCircleFake} from "./choice-game-test.component";
 import {GameControl} from "./services/game-control";
 import {GameOverBody, GameOverComponent} from "./game-over/game-over.component";
-import {MdProgressBarModule} from "@angular2-material/progress-bar";
-import {MdProgressCircleModule} from "@angular2-material/progress-circle";
 import {EffectivityCircle} from "./commons/effectivity-circle/effectivity-circle.component";
 import {EffectivityContent} from "./commons/effectivity-content/effectivity-content";
 
 @NgModule({
     imports:      [
         BrowserModule,
-        MdButtonModule,
-        MdIconModule,
-        MdCardModule,
-        MdGridListModule,
-        MdProgressCircleModule
+        MaterialModule.forRoot()
     ],
     exports: [
         ChoiceGameTest,
