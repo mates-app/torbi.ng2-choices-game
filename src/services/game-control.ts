@@ -71,8 +71,7 @@ export class GameControl{
                         "type": "text",
                         "answerType" : "text",
                         "problemExpression": "Text question",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "Response 1",
                             "Response 2",
                             "Response 3"
@@ -116,8 +115,7 @@ export class GameControl{
                 "gameProblems": [
                     {
                         "problemExpression": "{3}x^2 + {-21}x + {30} = 0",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "{3}",
                             "{-2}",
                             "{5}",
@@ -131,8 +129,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "{3}x^2 + {-24}x + {45} = 0",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "{3}",
                             "{4}",
                             "{11}",
@@ -146,8 +143,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "{3}x^2 + {-15}x + {18} = 0",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "{10}",
                             "{-1}",
                             "{3}",
@@ -161,8 +157,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "{4}x^2 + {-28}x + {40} = 0",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "{2}",
                             "{5}",
                             "{-6}",
@@ -176,8 +171,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "{4}x^2 + {-32}x + {64} = 0",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "{4}",
                             "{12}",
                             "{6}",
@@ -222,8 +216,7 @@ export class GameControl{
                         "type" : "math",
                         "answerType" : "text",
                         "problemExpression": "( a \\land F )",
-                        "solvedExpression": "",
-                        "answerOptions": [
+                        "options": [
                             "Tautología",
                             "Verdadero",
                             "Falso",
@@ -237,8 +230,7 @@ export class GameControl{
                         "type" : "math",
                         "answerType" : "text",
                         "problemExpression": "( T \\land b )",
-                        "solvedExpression": "",
-                        "answerOptions": [
+                        "options": [
                             "Tautología",
                             "Verdadero",
                             "Falso",
@@ -252,8 +244,7 @@ export class GameControl{
                         "type" : "math",
                         "answerType" : "text",
                         "problemExpression": "( T \\Leftrightarrow b )",
-                        "solvedExpression": "",
-                        "answerOptions": [
+                        "options": [
                             "Tautología",
                             "Verdadero",
                             "Falso",
@@ -294,8 +285,7 @@ export class GameControl{
                 "gameProblems": [
                     {
                         "problemExpression": "( {1} - {3} ) = ",
-                        "solvedExpression": "( {1} - {3} ) = {-2}",
-                        "answerOptions": [
+                        "options": [
                             "{1}",
                             "{-6}",
                             "{-2}",
@@ -308,8 +298,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "( {4} + {3} ) = ",
-                        "solvedExpression": "( {4} + {3} ) = {7}",
-                        "answerOptions": [
+                        "options": [
                             "{-3}",
                             "{5}",
                             "{6}",
@@ -322,8 +311,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "( {5} + {1} ) = ",
-                        "solvedExpression": "( {5} + {1} ) = {6}",
-                        "answerOptions": [
+                        "options": [
                             "{3}",
                             "{6}",
                             "{-2}",
@@ -336,8 +324,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "( {4} + {2} ) = ",
-                        "solvedExpression": "( {4} + {2} ) = {6}",
-                        "answerOptions": [
+                        "options": [
                             "{12}",
                             "{6}",
                             "{0}",
@@ -350,8 +337,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "( {2} - {4} ) = ",
-                        "solvedExpression": "( {2} - {4} ) = {-2}",
-                        "answerOptions": [
+                        "options": [
                             "{-9}",
                             "{-3}",
                             "{-12}",
@@ -393,8 +379,7 @@ export class GameControl{
                 "gameProblems": [
                     {
                         "problemExpression": "\\begin{cases} {2}x - {5}y + {3} = {-14} \\\\{3}x - {1}y + {5} = {12} \\\\\\end{cases}",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "x = {4}\\: y = {5}",
                             "x = {-6}\\: y = {-5}",
                             "x = {-4}\\: y = {-3}"
@@ -405,8 +390,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "\\begin{cases} {5}x + {2}y + {3} = {17} \\\\{1}x + {3}y + {2} = {10} \\\\\\end{cases}",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "x = {-8}\\: y = {-7}",
                             "x = {2}\\: y = {2}",
                             "x = {-6}\\: y = {-5}"
@@ -417,8 +401,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "\\begin{cases} {4}x - {4}y + {4} = {16} \\\\{4}x - {1}y + {2} = {17} \\\\\\end{cases}",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "x = {4}\\: y = {1}",
                             "x = {-6}\\: y = {-5}",
                             "x = {-4}\\: y = {-3}"
@@ -458,8 +441,7 @@ export class GameControl{
                 "gameProblems": [
                     {
                         "problemExpression": "{3}^{4}\\equiv x_{({4})}",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "{1}",
                             "{2}",
                             "{3}",
@@ -471,8 +453,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "{4}^{3}\\equiv x_{({2})}",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "{1}",
                             "{0}"
                         ],
@@ -482,8 +463,7 @@ export class GameControl{
                     },
                     {
                         "problemExpression": "{4}^{3}\\equiv x_{({3})}",
-                        "solvedExpression": null,
-                        "answerOptions": [
+                        "options": [
                             "{1}",
                             "{2}",
                             "{0}"

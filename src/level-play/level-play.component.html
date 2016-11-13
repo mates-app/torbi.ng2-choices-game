@@ -32,7 +32,7 @@
   [ngStyle]="{'display': displayProblem(i)}">
   <answer-buttons
     [isMath]="gameProblem.type == undefined || gameProblem.type == 'math'"
-    [answers]="gameProblemm.answerOptions"
+    [answers]="gameProblemm.options"
     (answer)="processAnswer($event)">
   </answer-buttons>
 </footer>

@@ -20,8 +20,7 @@ export class GameLevel{
 export class GameProblem{
     constructor(
         public problemExpression:string = '' ,
-        public solvedExpression:string = '',
-        public answerOptions:string[] = [''],
+        public options:string[] = [''],
         public answer:string[] = [''],
         public type:string = "math",
         public answerType:string = "math"

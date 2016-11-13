@@ -24,7 +24,7 @@ var GameOverComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'game-over',
-            template: "\n<div class=\"flex-container\">\n\n\n  <header>\n    <h1>Game Over</h1>    \n  </header>\n\n  <br>\n\n  <section class=\"content\">\n    <div class=\"sub-content\">\n      <ng-content select=\"game-over-body\"></ng-content>\n    </div>\n  </section>\n\n  <br>\n\n  <footer>\n  </footer>\n  </div>  \n\n\n  ",
+            template: "\n<div class=\"flex-container\">\n\n  <header>\n    <h1>Game Over</h1>    \n  </header>\n\n  <br>\n\n  <section class=\"content\">\n    <div class=\"sub-content\">\n      <ng-content select=\"game-over-body\"></ng-content>\n    </div>\n  </section>\n\n  <br>\n\n  <footer>\n  </footer>\n  </div>  \n\n\n  ",
             styleUrls: ['game-over.component.css']
         }), 
         __metadata('design:paramtypes', [])

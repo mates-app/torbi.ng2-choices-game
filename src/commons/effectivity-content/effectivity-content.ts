@@ -33,12 +33,20 @@ export class EffectivityContent implements OnInit{
     }
 
     ngAfterViewInit():void {
-        this.gameControl
-            .onLevelChange()
-            .subscribe(level => {
-                this.gameProgress.replay()
-                this.effectivity.replay()
-            })
+        
+        this.isGameOver 
+            ? this.gameControl
+                .onGameOver()
+                .subscribe(gameOver => {
+                    this.gameProgress.replay()
+                    this.effectivity.replay()
+                })
+            : this.gameControl
+                .onLevelChange()
+                .subscribe(level => {
+                    this.gameProgress.replay()
+                    this.effectivity.replay()
+                })
 
     }
 

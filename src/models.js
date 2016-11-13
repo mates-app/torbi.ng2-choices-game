@@ -25,16 +25,14 @@ var GameLevel = (function () {
 }());
 exports.GameLevel = GameLevel;
 var GameProblem = (function () {
-    function GameProblem(problemExpression, solvedExpression, answerOptions, answer, type, answerType) {
+    function GameProblem(problemExpression, options, answer, type, answerType) {
         if (problemExpression === void 0) { problemExpression = ''; }
-        if (solvedExpression === void 0) { solvedExpression = ''; }
-        if (answerOptions === void 0) { answerOptions = ['']; }
+        if (options === void 0) { options = ['']; }
         if (answer === void 0) { answer = ['']; }
         if (type === void 0) { type = "math"; }
         if (answerType === void 0) { answerType = "math"; }
         this.problemExpression = problemExpression;
-        this.solvedExpression = solvedExpression;
-        this.answerOptions = answerOptions;
+        this.options = options;
         this.answer = answer;
         this.type = type;
         this.answerType = answerType;

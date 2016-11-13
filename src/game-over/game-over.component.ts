@@ -10,7 +10,6 @@ import {GameOverType} from "../models";
     template: `
 <div class="flex-container">
 
-
   <header>
     <h1>Game Over</h1>    
   </header>

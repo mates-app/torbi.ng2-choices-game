@@ -76,9 +76,7 @@
     // Add package entries for angular packages
     // ngPackageNames.forEach(setPackageConfig);
     var config = {
-        paths: {              
-              'npm:': 'node_modules/'
-            },
+        paths: { 'npm:': 'node_modules/' },
         map: map,
         packages: packages
     };
