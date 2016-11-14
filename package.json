@@ -1,6 +1,6 @@
 {
   "name": "torbi.ng2-choices-game",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "author": "José Cullen <josecullen8@gmail.com> ",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
