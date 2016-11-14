@@ -5,7 +5,8 @@
 
 import {Component, OnInit, Input} from "@angular/core";
 import {GameStatusService} from "../../services/game-status.service";
-import {Observable, Observer} from "rxjs/Rx";
+import {Observable} from "rxjs/Observable";
+import {Observer} from "rxjs/Observer";
 import {GameControl} from "../../services/game-control";
 
 

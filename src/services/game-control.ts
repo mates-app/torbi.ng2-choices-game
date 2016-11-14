@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
 import {GameStatusService} from "./game-status.service";
 import {GameInstance, Score, GameOverType} from "../models";
-import {Subject, Observable, Observer} from "rxjs/Rx";
+import {Subject} from "rxjs/Subject";
+import {Observable} from "rxjs/Observable";
+import {Observer} from "rxjs/Observer";
 
 @Injectable()
 export class GameControl{

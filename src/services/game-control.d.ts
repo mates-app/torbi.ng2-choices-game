@@ -1,6 +1,6 @@
 import { GameStatusService } from "./game-status.service";
 import { GameInstance, Score, GameOverType } from "../models";
-import { Observable } from "rxjs/Rx";
+import { Observable } from "rxjs/Observable";
 export declare class GameControl {
     private gameStatusService;
     private gameInstance;

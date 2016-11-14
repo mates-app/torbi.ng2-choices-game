@@ -9,7 +9,7 @@
     "removeComments": false,
     "noImplicitAny": false,
     "declaration": true,
-    "outDir": "../lib"
+    "outDir": "../tmp"
   },
   "exclude": [
     "node_modules",
